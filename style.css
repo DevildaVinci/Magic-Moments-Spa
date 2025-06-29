@@ -650,6 +650,16 @@ main {
     color: #e15875; 
 }
 
+.contact-section a{
+    color: #e15875;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-section a:hover {
+    color: #f72250; 
+}
+
 .map-container {
     position: relative; 
     padding-bottom: 56.25%; 
