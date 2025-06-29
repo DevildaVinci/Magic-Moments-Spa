@@ -1,0 +1,764 @@
+/* General Body and Font Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5EEE6; 
+    background-image: url('https://media.istockphoto.com/id/856952970/photo/spa-and-wellness-setting.jpg?s=612x612&w=0&k=20&c=_cUMXanti-N5BU0hNH1ALCgRzL9BVyzPHrMrwhFLHO4=') ;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #000; 
+    line-height: 1.6;
+    scroll-behavior: smooth; 
+    position: relative; /* Needed for ::before overlay */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #fac9d4; 
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Logo left, nav-links right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo: image and text side by side */
+.logo {
+    display: flex;
+    flex-direction: row;         
+    align-items: center;         
+    text-decoration: none;
+    gap: 16px;                   
+    margin-left: 0;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.spa-title-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.spa-title-sub {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+    letter-spacing: 2px;
+    margin-top: -2px;
+    line-height: 1;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Push nav-links to the right */
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .nav-links li {
+    margin-left: 25px;
+    
+}
+
+.navbar .nav-links a {
+    color: black; 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    color: #f72250; 
+}
+
+/* Carousel */
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+    height: 500px; 
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.landing-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.landing-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.landing-content p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+    background-color: #fac9d4; 
+    color: #000; 
+    border: 2px solid #fac9d4;
+}
+
+.primary-btn:hover {
+    background-color: #f72250; 
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Main Content Area */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* About Section */
+.about-section {
+    background-color: #FFF8E3; 
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #e15875; 
+    margin-bottom: 2.5rem;
+    font-size: 2.5em;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #fac9d4; 
+}
+
+.about-section p {
+    margin-bottom: 1rem;
+    font-size: 1.05em;
+    text-align: justify;
+    color: #000; /* Black text */
+}
+/* Spa Menu Section */
+.spa-menu {
+    background-color: #FFF8E3; 
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+.spa-menu h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #e15875;
+    margin-bottom: 2.5rem;
+    font-size: 2.5em;
+    position: relative;
+    padding-bottom: 15px;
+    width: 100%;
+    flex-shrink: 0; 
+}
+
+.spa-menu h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #F5EEE6; /* Medium Blue/Gray for accent line */
+}
+
+
+/* Individual Menu Item Styles */
+.menu-item {
+    background-color: #E6A4B4; 
+    border: 1px solid #B8CFCE; 
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    width: calc(50% - 10px); 
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+    font-family: 'Playfair Display', serif;
+    color: #e15875;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.8em;
+    border-bottom: 1px dashed #7F8CAA; /* Medium Blue/Gray for dashed line */
+    padding-bottom: 10px;
+}
+
+.menu-item p {
+    margin: 0.5rem 0;
+}
+
+.menu-item .description {
+    font-size: 0.95em;
+    margin-bottom: 1rem;
+}
+
+.menu-item .price {
+    font-weight: 700;
+    color: #7F8CAA; /* Medium Blue/Gray for price */
+    font-size: 1.1em;
+    text-align: right;
+}
+
+/* Add responsive adjustment for `width` */
+@media (max-width: 768px) {
+    
+    .menu-item {
+        width: 100%; 
+    }
+}
+
+/* Premium Spa Rooms Section */
+.spa-rooms-section {
+    background-color: #FFF8E3; /* Very Light Gray/Off-White */
+    padding: 3rem 0;
+    margin: 3rem auto;
+    max-width: 900px; /* Consistent with other content sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.spa-rooms-section h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #333446;
+    margin-bottom: 2.5rem;
+    font-size: 2.5em;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.spa-rooms-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #f72250; /* Medium Blue/Gray */
+}
+
+/* Rooms Container */
+.rooms-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px;
+    padding: 0 1rem;
+}
+
+.room-card {
+    background-color: #E6A4B4;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    width: calc(50% - 15px); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.room-image {
+    width: 100%; 
+    height: 250px; 
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block; /* Remove extra space below image */
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover .room-image img {
+    transform: scale(1.05); /* Slightly zoom image on hover */
+}
+
+.room-content {
+    padding: 1.5rem;
+    color: #333446;
+    flex-grow: 1; /* Allow content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.room-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: #e15875; 
+    border-bottom: 1px dashed #7F8CAA;
+    padding-bottom: 10px;
+}
+
+.room-content p {
+    font-size: 1em;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    text-align: justify;
+    flex-grow: 1; /* Allow description to take up available space */
+}
+
+.room-features {
+    list-style: none;
+    padding: 0;
+    margin-top: auto; /* Push features to the bottom of the card content */
+    text-align: left;
+}
+
+.room-features li {
+    margin-bottom: 0.7rem;
+    font-size: 0.95em;
+    color: #f72250;
+}
+
+.room-features li i {
+    margin-right: 10px;
+    color: #f72250; /* Accent color for icons */
+    font-size: 1.1em;
+}
+
+/* Responsive adjustments for rooms section */
+@media (max-width: 992px) {
+    .room-card {
+        width: calc(50% - 15px); /* Maintain two columns for slightly smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .spa-rooms-section {
+        padding: 2rem 0;
+        margin: 2rem auto;
+    }
+    .room-card {
+        width: 100%; /* Stack cards on smaller screens (one column) */
+        max-width: 400px; /* Limit individual card width for aesthetics */
+    }
+    .rooms-container {
+        padding: 0 1rem; /* Ensure padding on sides */
+    }
+}
+
+@media (max-width: 480px) {
+    .spa-rooms-section h2 {
+        font-size: 2em;
+    }
+    .room-image {
+        height: 200px; /* Slightly shorter image height on very small screens */
+    }
+    .room-content {
+        padding: 1rem;
+    }
+    .room-content h3 {
+        font-size: 1.5em;
+    }
+    .room-content p {
+        font-size: 0.9em;
+    }
+    .room-features li {
+        font-size: 0.9em;
+    }
+}
+
+/* Reviews Section */
+.reviews-section {
+    background-color: #FFF8E3; /* Light Blue/Gray */
+    padding: 3rem 0; /* Add padding top/bottom, no horizontal padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 3rem auto; /* Center the section with auto margins */
+    max-width: 900px; /* Constrain width similar to main content */
+    overflow: hidden; /* Crucial for hiding parts of the slider outside the view */
+    position: relative; /* For potential future navigation buttons */
+}
+
+.reviews-section h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #333446;
+    margin-bottom: 2.5rem;
+    font-size: 2.5em;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.reviews-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #f72250; /* Medium Blue/Gray */
+}
+
+.reviews-slider {
+    width: 100%;
+    overflow: hidden; /* Hide anything overflowing the slider container */
+}
+
+.reviews-track {
+    display: flex; /* Arrange review cards in a row */
+    animation: scrollReviews 30s linear infinite; /* Animation for continuous scroll */
+    /* Adjust animation duration based on number of reviews and desired speed */
+    padding: 1rem 0; /* Vertical padding for the track */
+}
+
+.reviews-track:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
+.review-card {
+    flex: 0 0 auto; /* Prevent cards from growing/shrinking, and don't allow wrapping */
+    width: 300px; /* Fixed width for each review card */
+    background-color: #f5d0d9; /* Very Light Gray/Off-White */
+    border: 1px solid #B8CFCE; /* Light Blue/Gray */
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 0 15px; /* Spacing between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push stars/content/reviewer to edges if needed */
+    flex-shrink: 0; /* Critical: prevents cards from shrinking when space is tight */
+}
+
+.review-card .stars {
+    color: #FFD700; /* Gold color for stars */
+    margin-bottom: 1rem;
+    font-size: 1.2em;
+}
+
+.review-card .stars i {
+    margin: 0 2px;
+}
+
+.review-card p {
+    font-style: italic;
+    font-size: 1em;
+    margin-bottom: 1.5rem;
+    color: #333446;
+    flex-grow: 1; /* Allow paragraph to take available space */
+}
+
+.review-card .reviewer {
+    font-size: 0.9em;
+    color: #f72250; /* Medium Blue/Gray */
+}
+
+.review-card .reviewer strong {
+    display: block; /* Puts name on its own line */
+    font-size: 1.1em;
+    color: #333446;
+    margin-bottom: 5px;
+}
+
+
+/* Keyframe Animation for Scrolling */
+@keyframes scrollReviews {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-315px * 7)); 
+    }
+}
+
+/* Responsive adjustments for reviews section */
+@media (max-width: 768px) {
+    .reviews-section {
+        padding: 2rem 0;
+    }
+
+    .review-card {
+        width: 280px; /* Slightly smaller cards for narrower screens */
+        margin: 0 10px;
+    }
+
+    @keyframes scrollReviews {
+        100% {
+            /* Recalculate for smaller cards */
+            transform: translateX(calc(-290px * 7)); /* (280px + 10px) * 7 unique cards */
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-section {
+        padding: 1.5rem 0;
+    }
+
+    .review-card {
+        width: 250px; /* Even smaller cards */
+        margin: 0 8px;
+    }
+
+    .review-card p {
+        font-size: 0.9em;
+    }
+
+    @keyframes scrollReviews {
+        100% {
+            /* Recalculate for even smaller cards */
+            transform: translateX(calc(-258px * 7)); /* (250px + 8px) * 7 unique cards */
+        }
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #FFF8E3; 
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #e15875; 
+    margin-bottom: 2.5rem;
+    font-size: 2.5em;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.contact-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #fac9d4; 
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    margin-bottom: 0.8rem;
+    color: #000; /* Black text */
+}
+
+.contact-section p strong {
+    color: #e15875; 
+}
+
+.map-container {
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #ccc; 
+    border-radius: 8px; 
+    margin-top: 2rem; 
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    background-color: #fac9d4; 
+    color: #FFF8E3; 
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .landing-content h1 {
+        font-size: 3.5em;
+    }
+    .landing-content p {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .landing-section {
+        height: 60vh;
+        padding: 80px 15px;
+    }
+    .landing-content h1 {
+        font-size: 2.8em;
+    }
+    .landing-content p {
+        font-size: 1.1em;
+    }
+    .btn {
+        padding: 12px 25px;
+        margin: 0 5px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .spa-menu h2, .about-section h2, .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .menu-item h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1.5em;
+    }
+    .landing-section {
+        height: 50vh;
+        padding: 60px 10px;
+    }
+    .landing-content h1 {
+        font-size: 2.2em;
+    }
+    .landing-content p {
+        font-size: 0.95em;
+    }
+    .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0 0.8rem;
+    }
+
+    .about-section, .spa-menu, .contact-section {
+        padding: 1.5rem;
+    }
+}
